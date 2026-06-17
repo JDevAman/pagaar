@@ -1,0 +1,24 @@
+info:
+  name: Add Employee
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/api/v1/employees/add
+  body:
+    type: json
+    data: |-
+      {
+        "employeeCode": "H001",
+        "name": "Dev 1",
+        "department": "Operations",
+        "position": "Associate"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

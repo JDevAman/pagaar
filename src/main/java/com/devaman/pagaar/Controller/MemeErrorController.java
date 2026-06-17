@@ -14,7 +14,6 @@ public class MemeErrorController implements ErrorController {
     @RequestMapping("/error")
     public ResponseEntity<String> handleError(HttpServletRequest req){
         Object statusCode = req.getAttribute("jakarta.servlet.error.status_code");
-        System.out.println(req);
         Integer status = (statusCode != null) ? Integer.parseInt(statusCode.toString()) : 500;
         String memeHtml = "<html><body>"+ "<h1>Error Code:" + statusCode+ "</h1>" + "<img src='https://http.cat/" +status+ " alt='Cat'/>";
 

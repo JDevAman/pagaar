@@ -1,0 +1,9 @@
+CREATE TABLE employees(
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    employee_code VARCHAR(8) NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    department VARCHAR(50) NOT NULL,
+    position VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP
+);
